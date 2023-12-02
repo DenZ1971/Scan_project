@@ -1,0 +1,29 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__left-title {
+    margin-top: 45px;
+    font-family: Ferry;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+
+
+
+}
+
+.content__left-img {
+    width: 321.76px;
+    height: 342.03px;
+    margin-top: 14px;
+    margin-left: 112px;
+    margin-bottom: 103px;
+}
+
+.content__right-form {
+    margin-top: 69px;
+    margin-right: 81px;
+}

@@ -1,0 +1,90 @@
+.header {
+    padding: 0;
+    height: 93px;
+
+}
+
+.header__row {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__navbar ul {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+}
+
+.header__navbar-text {
+    color: black;
+}
+
+.header__navbar-text:hover {
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+
+.header__rect {
+    width: 2px;
+    height: 26px;
+}
+
+
+
+.header__signin {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    column-gap: 20px;
+    font-size: 14pt;
+       
+}
+
+.header__signin-text {
+    color: black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    opacity: 0.4;
+}
+
+.header__signin-text:hover {
+    opacity: 1;
+}
+
+
+.header__login-button {
+    color: #000;
+    padding: 4px 22px 5px;
+    background-color: #7ce3e1;
+    border-radius: 5px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.14px;
+
+}
+
+.header__login-button:hover {
+    background-color: #5970FF;
+}
