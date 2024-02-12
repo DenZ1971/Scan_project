@@ -15,9 +15,8 @@
     "react-hook-form": "^7.48.2",
     "react-router": "^6.19.0",
     "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
-    "simple-react-snippets": "file:../../../Загрузки/burkeholland.simple-react-snippets-1.2.7/extension",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.4",
     "web-vitals": "^2.1.4"

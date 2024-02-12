@@ -76,7 +76,7 @@ export default function FormAuth() {
             </label>
             </div>
             
-            <input className='button' type='submit' disabled={!isValid}/>
+            <input className='button' type='submit' value='Войти' disabled={!isValid}/>
 
             <a className='formauth__restorepasswod' href='#s'>Восстановить пароль</a>
         
