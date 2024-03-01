@@ -1,0 +1,72 @@
+@import url('../../styles/index.css');
+
+.summary {
+    margin-bottom: 109px;
+}
+
+.summary__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+
+
+.summary__title {
+    font-family: Ferry;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px;
+    letter-spacing: 0.6px;
+    max-width: 509px;
+   
+    
+
+}
+
+.summary__desc {
+    margin-top: 36px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.2px;
+    padding-bottom: 127px;
+    max-width: 447px;
+
+}
+
+.summary__title_2 {
+    font-family: Ferry;
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 36px;
+    letter-spacing: 0.6px;
+    max-width: 447px;
+   
+    
+
+}
+
+.summary__desc_2 {
+    color: #949494;
+    margin-top: 17px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    max-width: 234px;
+
+}
+
+
+
+.summary__image {
+    padding-right: 0;
+    width: 552px;
+    height: 369px;
+    flex-shrink: 0;
+}

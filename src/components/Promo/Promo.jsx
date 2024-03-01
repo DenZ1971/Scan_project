@@ -1,7 +1,16 @@
 import './promo.css'
 import promoImage from '../img/2398 1.png';
+import { useState, useEffect } from 'react';
+
 
 export default function Promo() {
+    const [Authenticated, setAuthenticated] = useState(false);
+
+    useEffect(() => {
+      const token = localStorage.getItem('accessToken');
+      setAuthenticated(!!token); 
+    }, []); 
+
   return (
     <div className="promo">
         <div className="container">
@@ -10,10 +19,10 @@ export default function Promo() {
                     <div className="promo__title">сервис по поиску публикаци о компании <p /> по его ИНН</div>
                     <div className="promo__desc">Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</div>
                     <div className="promo__btn-wrapper">
-                        <a href='#!' className="promo__btn">
-                        Запросить данные
-                        </a>
-
+                        
+                        {Authenticated ? <a href='/search' className="promo__btn">Запросить данные</a> : null}
+                        
+                        
                     </div>               
                 </div>
                 <div className="promo__image">

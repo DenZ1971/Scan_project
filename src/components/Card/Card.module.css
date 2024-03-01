@@ -3,8 +3,8 @@
     width: 415px;
     height: 540px;
     border-radius: 10px;
-    border: 2px;
     box-shadow: 0px 0px 20px 0px #00000033;
+    
     
 
 
@@ -16,6 +16,7 @@
     background-color:#FFB64F;
     width: 415px;
     height: 132px;
+    border: 2px;
     border-radius: 10px 10px 0px 0px;
 
     
@@ -99,10 +100,10 @@ letter-spacing: 0.01em;
 }
 
 .card__tarifdesc::before {
-    content: url(../img/icons8.png); /* Замените 'путь_к_иконке' на путь к вашей иконке */
-    display: inline-block; /* Отображаем иконку как блок */
-    margin-right: 5px; /* Расстояние между иконкой и текстом */
-  }
+    content: url(../img/icons8.png); 
+    display: inline-block; 
+    margin-right: 5px; 
+}
 
 .card__tarifdesc {
     margin-left: 58px;

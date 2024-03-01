@@ -1,10 +1,13 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './formauth.css';
 import axios from 'axios';
 
 
-export default function FormAuth() {
+export default function FormAuth({ onAuthentication }) {
+    
+    const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState('');
     const {
         register,
@@ -31,6 +34,9 @@ export default function FormAuth() {
             localStorage.setItem('expire', response.data.expire);
       
             reset(); // Очистка формы после успешной отправки
+            
+
+            navigate('/');
           } catch (error) {
             console.error('Error:', error);
             // Обработка ошибок

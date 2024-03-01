@@ -1,0 +1,173 @@
+.searchform__content {
+    display: flex;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.searchform {
+    
+    width: 872px;
+    height: 543px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #00000026;
+    margin-top: 47px;
+    margin-bottom: 80px;
+
+
+}
+
+
+
+.searchform__content-left {
+    margin-top: 10px;
+    max-width: 330px;
+    justify-content: left;
+    margin-left: 30px;
+    
+}
+
+.searchform__content-right {
+    margin-top: 30px;
+    max-width: 600px;
+    justify-content: right;
+    margin-right: 30px;
+   
+}
+
+.searchform__form-docs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.searchform__form-date {
+    margin-top: 50px;
+   
+}
+
+
+.searchform__form-docs {
+textarea,
+select,
+input{
+  
+  font-family: Inter;
+  color: #949494;
+  box-sizing: border-box;
+  width: 242px;
+  height: 43px;
+  border-radius: 5px;
+  border: 1px solid #C7C7C7;
+  padding: 10px 15px 10px 15px;
+  font-size:18px;
+  box-shadow: 0px 0px 20px 0px #0000000D;
+  margin-top: 20px;
+  
+}
+}
+
+input[type="checkbox"],
+lable {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #C7C7C7;
+    margin: 10px;
+    font-size:18px;
+    margin-top: 5px;
+    
+   
+}
+
+.searchform__date-inputs {
+    display: flex;
+}
+
+
+
+.searchform__form .button {
+    display: block;
+    margin-left: 30px;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.22px;
+    padding: 16px 112px 16px 113px;
+    background-color:#5970FF;
+    border-radius: 5px;
+   
+
+
+}
+
+.searchform__form
+input[type="submit"] {
+    display: block;
+    background: #516391;
+    color: white;
+    margin-top: 130px;
+   
+}
+
+ 
+
+input[type="submit"]:hover {
+  background: rgb(36, 16, 163);
+  
+}
+
+.searchform__error {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #FF5959;
+    text-align: center;
+
+
+}
+
+.searchform__text {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #949494;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+
+
+.react-datepicker-wrapper {
+    display: inline-block; 
+}
+
+.react-datepicker__input-container {
+    display: inline-block;
+    position: relative; 
+}
+
+.react-datepicker__input-container input {
+    width: 176px;
+    height: 45px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border: 1px solid #C7C7C7;
+    font-size: 14px;
+    box-shadow: 0px 0px 20px 0px #0000000D;
+    font-family: Inter;
+    color: #949494;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    padding: 10px 15px; 
+}

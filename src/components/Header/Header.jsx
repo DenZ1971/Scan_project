@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from '../img/logo_header.png';
 import Rect from '../img/Rectangle 6.png';
+import avatar from '../img/—Pngtree—businessman user avatar wearing suit_8385663.png';
 import './header.css'
 import axios from 'axios';
 
@@ -39,6 +40,7 @@ import axios from 'axios';
 
 export default function Header() {
   const [userData, setUserData] = useState(null); // Состояние для данных пользователя
+  const location = useLocation();
 
   useEffect(() => {
     // Функция для получения данных о пользователе после авторизации
@@ -53,6 +55,18 @@ export default function Header() {
 
         // Сохраняем данные пользователя в состоянии компонента
         setUserData(response.data);
+
+        console.log('Response data:', response.data);
+
+        if (response.data && response.data.eventFiltersInfo) {
+          const { eventFiltersInfo } = response.data;
+          console.log('Used company count:', eventFiltersInfo.usedCompanyCount);
+          console.log('Company limit:', eventFiltersInfo.companyLimit);
+        } else {
+          console.log('Unexpected response format:', response.data);
+        }
+
+
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
@@ -60,8 +74,19 @@ export default function Header() {
 
     // Вызываем функцию получения данных о пользователе при монтировании компонента
     fetchUserDataFromServer();
-    console.log(userData);
-  }, []);
+    
+  }, [location]);
+
+  const handleLogout = () => {
+    // Удаление токена и других данных из localStorage
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('expire');
+    // Обновление состояния, чтобы скрыть информацию о пользователе
+    setUserData(null);
+  };
+
+  
+  
 
   return (
     <header className='header'>
@@ -72,28 +97,48 @@ export default function Header() {
           </div>
           <nav className='header__navbar'>
             <ul>
-              <li><a className='header__navbar-text' href='#s'>Home</a></li>
-              <li><a className='header__navbar-text' href='#s'>Tarif</a></li>
+              <li><a className='header__navbar-text' href='/'>Главная</a></li>
+              <li><a className='header__navbar-text' href='#s'>Тарифы</a></li>
               <li><a className='header__navbar-text' href='#s'>FAQ</a></li>
             </ul>
           </nav>
           <div className='header__user-info'>
             {userData ? (
               <div className='header__user-info-data'>
-                <div className="header__user-info-status">
-                  <span className='header__user-info-status-spend'>{userData.usedCompanyCount}</span>
-                  <span className='header__user-info-status-limit'>{userData.companyLimit}</span>
-
+              <div className="header__user-info-status">
+                <div className="header__user-info-column">
+                  <div className='header__user-info-status-text'>
+                  <span className='header__user-info-status-spend'>Использовано компаний  <span className='header__user-info-status-spend-span'>{userData.eventFiltersInfo.usedCompanyCount}</span></span>
+                  <span className='header__user-info-status-limit'>Лимит по компаниям  <span className='header__user-info-status-limit-span'>{userData.eventFiltersInfo.companyLimit}</span></span>
                 </div>
-                <img className='header__user-info-avatar' src={userData.eventFiltersInfo.avatar} alt='User Avatar' />
-                <span className='header__user-info-name'>{userData.name}</span>
+                </div>
+                <div className="header__user-info-column">
+                  <span className='header__user-info-name'>Алексей А.</span>
+                  <a className='header__logout-text' href='/' onClick={handleLogout}>Выйти</a>
+                </div>
               </div>
+              <img className='header__user-info-avatar' src={avatar} alt='User Avatar' />
+            </div>
+       
+            
+ 
+
+              // <div className='header__user-info-data'>
+              //   <div className="header__user-info-status">
+              //     <span className='header__user-info-status-spend'>Использовано компаний {userData.eventFiltersInfo.usedCompanyCount}</span>
+              //     <span className='header__user-info-status-limit'>Лимит по компаниям{userData.eventFiltersInfo.companyLimit}</span>
+
+              //   </div>
+              //   <span className='header__user-info-name'>Алексей А.</span>
+              //   <a className='header__logout-text' href='#s'>Выйти</a>
+              //   <img className='header__user-info-avatar' src={avatar} alt='User Avatar' />
+              // </div>
             ) : (
               <div className='header__user-info-placeholder'>
-                <a className='header__signin-text' href='#s'>SignIn</a>
+                <a className='header__signin-text' href='#s'>Зарегистрироваться</a>
                 <img className='header__rect' src={Rect} alt='I' />
                 <Link to="/auth">
-                  <button className='header__login-button'>Login</button>
+                  <button className='header__login-button'>Войти</button>
                 </Link>
               </div>
             )}

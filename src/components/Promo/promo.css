@@ -1,9 +1,8 @@
 /* @font-face {
     font-family: 'Ferry'; /* Замените 'YourFontName' на имя вашего шрифта. */
-    /* src: local('2717-font') url('../../../public/fonts/2717-font.otf') format('otf'); /* Укажите правильный путь к вашему файлу шрифта. */
-   
-  /* } */ 
-
+    /*src: local('2717-font') url('../../../public/fonts/2717-font.otf') format('otf'); /* Укажите правильный путь к вашему файлу шрифта. */
+  /*}  */
+@import url('../../styles/index.css');
 
 .promo {
     margin-bottom: 109px;
@@ -12,24 +11,18 @@
 .promo__content {
     display: flex;
     justify-content: space-between;
-
-    
-   
-   
     margin-top: 27px;
 }
 
-.promo__text {
 
-}
 
 .promo__title {
     font-family: Ferry;
     color: #000;
     font-size: 60px;
     font-style: normal;
-    font-weight: Black;
-    line-height: normal;
+    font-weight: 900;
+    line-height: 72px;
     letter-spacing: 0.6px;
     max-width: 743px;
    

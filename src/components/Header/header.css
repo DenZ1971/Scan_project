@@ -44,6 +44,7 @@
 .header__rect {
     width: 2px;
     height: 26px;
+    margin:0 5px;
 }
 
 
@@ -54,6 +55,7 @@
     justify-content: right;
     column-gap: 20px;
     font-size: 14pt;
+   
        
 }
 
@@ -65,6 +67,7 @@
     line-height: normal;
     letter-spacing: 0.14px;
     opacity: 0.4;
+    
 }
 
 .header__signin-text:hover {
@@ -82,9 +85,101 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.14px;
+   
 
 }
 
 .header__login-button:hover {
     background-color: #5970FF;
 }
+
+.header__user-info-avatar {
+    
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.header__user-info-data {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+
+
+
+.header__user-info-status {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    
+}
+
+.header__user-info-column {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в столбец */
+    align-items: center; /* Выравнивание по центру по горизонтали */ 
+}
+
+
+  
+.header__user-info-name {
+    font-size: 14px;
+    line-height: 17px;
+    color: #949494;
+    
+  }
+  
+.header__logout-text {
+    font-size: 10px;
+    line-height: 12px;
+    color: #949494;
+  }
+
+.header__user-info-status-spend {
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 5px;
+    
+    
+  }
+
+.header__user-info-status-limit {
+    font-size: 10px;
+    
+  }
+
+.header__user-info-status-text {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в столбец */
+    align-items:end; /* Выравнивание по центру по горизонтали */ 
+    background-color: #D9D9D9;
+    padding: 10px 15px 15px 12px;
+    border-radius: 5px;
+    
+    
+}
+
+.header__user-info-status-spend-span {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    color: black;
+    padding-left: 5px;
+    
+    
+    
+    
+  }
+
+  .header__user-info-status-limit-span {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    color: #8AC540;
+    padding-left: 5px;
+   
+    
+  }
+  

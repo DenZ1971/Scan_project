@@ -2,7 +2,7 @@ import './auth.css'
 import Characters from '../img/Characters.png'
 import FormAuth from '../FormAuth/FormAuth'
 
-export default function Auth() {
+export default function Auth({onAuthentication}) {
   return (
     <div className="auth">
         <div className="container">
@@ -16,7 +16,7 @@ export default function Auth() {
                 </div>
                 <div className="content__right">
                     <div className="content__right-form">
-                        <FormAuth />
+                        <FormAuth onAuthentication={onAuthentication}/>
                     </div>
                 </div>
             </div>

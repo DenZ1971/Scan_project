@@ -3,10 +3,10 @@ import styles from './Card.module.css'
 
 export default function Card(props) {
   return (
-    <div className={styles.card}>
-        <div className={styles.card__header}>
+    <div className={styles.card} style={{border : props.border}} >
+        <div className={styles.card__header} style={{backgroundColor : props.color}}>
             <div className={styles.card__hederinfo}>
-                <div className={styles.card__title}>{props.title}
+                <div className={styles.card__title} style={{color : props.textcolor}}>{props.title}
             <p className={styles.card__desc}><span>{props.description}</span></p>
                 </div>
             </div>
@@ -25,8 +25,8 @@ export default function Card(props) {
             <li className={styles.card__tarifdesc}>{props.tarifdesc2}</li>
             <li className={styles.card__tarifdesc}>{props.tarifdesc3}</li>
             </ul>
-            <a href='#!' className={styles.card__btn}>
-            Подробнее
+            <a href='#!' className={styles.card__btn}style={{fontSize : props.size, backgroundColor : props.backgroundColorcolor, padding : props.padding}}>
+            {props.button}
             </a>
     </div>
   )

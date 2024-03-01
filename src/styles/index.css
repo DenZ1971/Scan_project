@@ -1,10 +1,14 @@
+@import url('reset.css');
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-@font-face {
-    font-family: 'Ferry'; /* Замените 'YourFontName' на имя вашего шрифта. */
-    src: local('2717-font') url('../../public/fonts/2717-font.otf') format('otf'); /* Укажите правильный путь к вашему файлу шрифта. */
-   
-  }
+/* @font-face {
+    font-family: 'Ferry'; /* Замените 'YourFontName' на имя вашего шрифта. 
+    src: local('2717-font.otf') url('../../public/fonts/2717-font.otf') format('otf'); /* Укажите правильный путь к вашему файлу шрифта. 
+    font-weight: 900;
+    font-style: normal;
+
+  } */
 
 
 body {
@@ -12,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 1440 px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 60px;
 
