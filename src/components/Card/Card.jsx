@@ -25,7 +25,11 @@ export default function Card(props) {
             <li className={styles.card__tarifdesc}>{props.tarifdesc2}</li>
             <li className={styles.card__tarifdesc}>{props.tarifdesc3}</li>
             </ul>
-            <a href='#!' className={styles.card__btn}style={{fontSize : props.size, backgroundColor : props.backgroundColorcolor, padding : props.padding}}>
+            <a href='#!' className={styles.card__btn}style={{fontSize: props.size, 
+                backgroundColor: props.backgroundColorcolor, 
+                padding: props.padding,
+                '@media (max-width: 575px)': { 
+                padding: props.mobilePadding } }}>
             {props.button}
             </a>
     </div>

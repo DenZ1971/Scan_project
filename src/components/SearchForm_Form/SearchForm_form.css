@@ -171,3 +171,14 @@ input[type="submit"]:hover {
     letter-spacing: 0.02em;
     padding: 10px 15px; 
 }
+
+.error {
+    color: red;
+}
+
+.error-date {
+
+    margin-top: 10px;
+    color: red;
+
+}

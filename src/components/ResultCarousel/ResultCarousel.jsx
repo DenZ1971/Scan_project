@@ -9,147 +9,24 @@ import { useState } from 'react';
 
 
 
-
-
-// const data = [
-//   {
-//     id: 1,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 2,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 3,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 4,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 5,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 6,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 7,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 8,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 9,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 10,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 11,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 12,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 13,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 14,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 15,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 16,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 17,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 18,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 19,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-//   {
-//     id: 20,
-//     date: '01.01.2022',
-//     total: '5',
-//     risks: '0',
-//   },
-// ]
-
 export default function Carousel({searchData}) {
 
-  // const transformedData = searchData.map((item, index) => ({
-    
-  //   date: `${item.histogramType === 'totalDocuments'}` && `${item.data[0].date}`,
-  //   value: `${item.data[0].value}`,
-  //   risk: `${item.data[0].value}`
-  // }));
   let transformedData = [];
-  for (let i = 1; i < searchData.length; i++) {
-    transformedData.push({
-      date: `${searchData[i-1].data[i-1].date}`,
-      value: `${searchData[i-1].data[i-1].value}`,
-      risk: `${searchData[i].data[i-1].value}`
+  if (searchData && searchData.length > 0) {
+    for (let i = 1; i < searchData.length; i++) {
+      transformedData.push({
+        date: `${searchData[i-1].data[i-1].date}`,
+        value: `${searchData[i-1].data[i-1].value}`,
+        risk: `${searchData[i].data[i-1].value}`
     })
   }
+  // for (let i = 1; i < searchData.length; i++) {
+  //   transformedData.push({
+  //     date: `${searchData[i-1].data[i-1].date}`,
+  //     value: `${searchData[i-1].data[i-1].value}`,
+  //     risk: `${searchData[i].data[i-1].value}`
+  //   })
+  // }
  
 
   console.log(transformedData);
@@ -201,8 +78,6 @@ export default function Carousel({searchData}) {
       
   >
     
-    
-
     {transformedData.map((item, index) => (
       console.log(item, index),
 
@@ -236,4 +111,5 @@ export default function Carousel({searchData}) {
   </div>
   </div>
   )
+}
 }

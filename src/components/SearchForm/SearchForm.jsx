@@ -6,6 +6,8 @@ import SearchForm_form from '../SearchForm_Form/SearchForn_form';
 import { useState } from 'react';
 import Result from '../Result/Result'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../AuthContext/AuthContext';
 
 
 
@@ -21,6 +23,7 @@ export default function SearchForm({onResult}) {
         console.log('Search result in SearchForm:', searchData);
       };
   return (
+    
     <div className="search">
         <div className="container">
             <div className="search__content">
@@ -61,6 +64,7 @@ export default function SearchForm({onResult}) {
         
         
     </div>
+    
   );
 };
 

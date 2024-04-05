@@ -139,3 +139,149 @@ letter-spacing: 0.01em;
     opacity: 0.8;
     color: #000;
 }
+
+@media (max-width: 575px) {
+    .card {
+   
+        width: 335px;
+        height: 512px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px #00000033
+    
+    }
+
+    .card__header {
+        display: flex;
+        justify-content: space-between;
+        background-color:#FFB64F;
+        width: 335px;
+        height: 132px;
+        border: 2px;
+        border-radius: 10px 10px 0px 0px;
+    
+        
+    
+    }
+    
+    .card__hederinfo {
+        display: flex;
+        align-items: center;
+       
+        
+    }
+    
+    .card__title {
+        margin-left: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        
+        
+    
+    }
+    
+    .card__desc {
+        
+        margin-top: 30px;
+        
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+    
+    }
+    
+    .card__image {
+        
+        margin-top: 11px;
+        width: 59px;
+        height: 53px;
+    
+    }
+    
+    .card__price {
+        display: flex;
+        column-gap: 19px;
+        margin-left: 30px;
+        margin-top: 20px;
+        font-family: Inter;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.01em;
+       
+    }
+    
+    .card__fullprice {
+        opacity: 50%;
+        text-decoration: line-through;
+    }
+    
+    .card__pricedesc {
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    
+    
+    }
+    
+    .card__tarif {
+        margin-left: 30px;
+        margin-top: 30px;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        
+    
+    }
+    
+    .card__tarifdesc::before {
+        content: url(../img/icons8.png); 
+        display: inline-block; 
+        margin-right: 5px; 
+    }
+    
+    .card__tarifdesc {
+        display: flex;
+        margin-left: 28px;
+        margin-top: 5px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+    
+       
+    }
+    
+    .card__tarifdesclist {
+        margin-bottom: 30px;
+    }
+    
+    .card__btn {
+        
+        display: flex;
+        color: white;
+        background-color: aqua;
+        text-align: center;
+        justify-content: center;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 15px 60px 15px 60px;
+        background-color:#5970FF;
+        border-radius: 5px;
+    }
+    
+    .card__btn:hover {
+        opacity: 0.8;
+        color: #000;
+    }
+}

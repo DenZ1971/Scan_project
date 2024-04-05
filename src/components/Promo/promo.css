@@ -4,6 +4,8 @@
   /*}  */
 @import url('../../styles/index.css');
 
+
+@media (min-width: 576px) {
 .promo {
     margin-bottom: 109px;
 }
@@ -69,4 +71,64 @@
     width: 629px;
     height: 593px;
     flex-shrink: 0;
+}
+}
+
+@media (max-width: 575px) {
+
+    .promo__content {
+        
+        justify-content: space-between;
+        margin-top: 27px;
+    }
+    .promo__title {
+        font-family: Ferry;
+        color: #000;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 36px;
+        letter-spacing: 0.6px;
+        max-width: 560px;
+    
+    }
+
+    .promo__desc {
+        margin-top: 18px;
+        max-width: 434px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 63px;
+    
+    }
+
+    .promo__btn {
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        padding: 14px 50px 18px 50px;
+        background-color:#5970FF;
+        border-radius: 5px;
+    
+    }
+    
+    .promo__btn:hover {
+        opacity: 0.8;
+        color: #000;
+    }
+
+    .promo__image {
+        padding-top: 30px;
+        padding-right: 0;
+        width: 347px;
+        height: 327px;
+        flex-shrink: 0;
+    }
 }

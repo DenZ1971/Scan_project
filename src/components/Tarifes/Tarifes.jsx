@@ -25,7 +25,7 @@ export default function Tarifes() {
             <div className="tarifes__card">
                 {Authenticated ? <Card  title='Beginer' description='Для небольшого исследования' img={lamp}
                 price='799 ₽' fullprice='1200 ₽' pricedesc='или 150 ₽/мес. при рассрочке на 24 мес'
-                tarifdesc1='Безлимитная история запросов' tarifdesc2='Безопасная сделка' tarifdesc3='Поддержка 24/7' button='Перейти в личный кабинет'  backgroundColorcolor='#D2D2D2' padding='18px 40px 18px 40px' border='2px solid #FFB64F'/> : <Card  title='Beginer' description='Для небольшого исследования' img={lamp}
+                tarifdesc1='Безлимитная история запросов' tarifdesc2='Безопасная сделка' tarifdesc3='Поддержка 24/7' button='Перейти в личный кабинет'  backgroundColorcolor='#D2D2D2' padding='18px 40px 18px 40px' mobilePadding='10px 30px 10px 30px' border='2px solid #FFB64F'/> : <Card  title='Beginer' description='Для небольшого исследования' img={lamp}
                 price='799 ₽' fullprice='1200 ₽' pricedesc='или 150 ₽/мес. при рассрочке на 24 мес'
                 tarifdesc1='Безлимитная история запросов' tarifdesc2='Безопасная сделка' tarifdesc3='Поддержка 24/7' button='Подробнее' />}
 

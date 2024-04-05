@@ -69,8 +69,6 @@ export default function Carousel() {
 
       }}
   
-      
-  
   >
     
     {data.map(card => (
