@@ -1,15 +1,24 @@
-.formauth {
 
-    width: 429px;
-    height: 523px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px #00000026;
-    margin-top: 69px;
-    margin-right: 81px;
-    margin-bottom: 80px;
+@media (min-width: 576px) {
+    .formauth {
 
-
+        width: 429px;
+        height: 523px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px #00000026;
+        margin-top: 69px;
+        margin-right: 81px;
+        margin-bottom: 80px;
+    
+    
+    }
+    .formauth__form {
+        max-width: 429px;
+        margin: 0 auto;
+        padding: 0 25px;
+     }
 }
+
 
 .formauth__header {
     display: flex;
@@ -43,11 +52,7 @@
     margin-top: 25px;
 }
 
-.formauth__form {
-   max-width: 429px;
-   margin: 0 auto;
-   padding: 0 25px;
-}
+
 
 .formauth__form-login {
     margin-top: 20px;
@@ -121,10 +126,78 @@ input[type="submit"]:hover {
     color: #5970FF;
     text-decoration: underline !important;
     justify-content:center;
-    
-   
-   
+}
 
+
+@media (max-width: 575px) {
+    .formauth {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* max-width: 480px; */
+        height: 504px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px #00000026;
+        margin-top: 69px;
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 80px;
+    }
+
+    .formauth__header-textleft {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: #029491;
+        margin-left: 25px;
+        margin-top: 25px;
+    
+    
+    }
+    
+    .formauth__header-textright {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: #C7C7C7;
+        margin-right: 25px;
+        margin-top: 25px;
+    }
+
+    .formauth__form {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 25px;
+     }
+
+    .formauth__form {
+        textarea,
+        select,
+        input {
+          
+          display: flex;
+          box-sizing: border-box;
+          width: 100%;
+          height: 43px;
+          border-radius: 5px;
+          border: 1px solid #C7C7C7;
+          padding: 10px 15px 10px 15px;
+          font-size:14px;
+          box-shadow: 0px 0px 20px 0px #0000000D;
+          margin-top: 15px;
+        }
+    }
+
+    input[type="submit"] {
+        background: #516391;
+        color: white;
+        margin-top: 30px;
+        
+    }
 
 }
 

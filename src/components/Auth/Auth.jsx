@@ -18,6 +18,9 @@ export default function Auth({onAuthentication}) {
                     <div className="content__right-form">
                         <FormAuth onAuthentication={onAuthentication}/>
                     </div>
+                    <div className="content__image-mobile">
+                    <img src={Characters} alt = "ImageImage" />
+                    </div>
                 </div>
             </div>
         </div>

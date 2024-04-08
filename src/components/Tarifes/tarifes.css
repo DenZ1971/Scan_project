@@ -51,5 +51,10 @@
       font-weight: 900;
       font-size: 28px;
   }
+  .tarifes__card {
+    display:flex;
+    flex-direction: column;
+    
+  }
   
   }

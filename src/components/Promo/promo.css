@@ -125,10 +125,9 @@
     }
 
     .promo__image {
+        display: flex;
         padding-top: 30px;
         padding-right: 0;
-        width: 347px;
-        height: 327px;
-        flex-shrink: 0;
+        
     }
 }

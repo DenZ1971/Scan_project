@@ -93,6 +93,16 @@
     
     
     }
+    .carousel__img {
+        margin-top: 22px;
+        margin-left: 19px;
+        width: 56px;
+        height: 64px;
+        color: hsl(124, 91%, 39%);
+       
+    
+    
+    }
 }
 
 

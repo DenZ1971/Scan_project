@@ -27,3 +27,53 @@
     margin-top: 69px;
     margin-right: 81px;
 }
+
+@media (min-width: 576px) {
+    .content__image-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+
+    .content__left-title {
+        margin-top: 35px;
+        font-family: Ferry;
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+    }
+
+    .content__right-form {
+        margin-top: 69px;
+        margin-right: 0px;
+    }
+
+        
+
+
+    .content__right-form {
+        
+        
+        
+    }
+
+    .content__left-img {
+        display: none;
+    }
+
+    .content__image-mobile {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        
+    }
+}
