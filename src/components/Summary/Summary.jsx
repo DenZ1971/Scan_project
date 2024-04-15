@@ -32,6 +32,8 @@ export default function Promo({searchData}) {
                 <div className="summary__image">
                     <img src={summaryImage} alt="Img"></img>
                 </div>
+                <div className="summary__title_2-mobile">Общая сводка</div>
+                    <div className="summary__desc_2-mobile">Найдено {sum} вариантов</div>  
 
             </div>
 

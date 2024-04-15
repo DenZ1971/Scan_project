@@ -1,10 +1,13 @@
-.searchform__content {
-    display: flex;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 
+@media (min-width: 576px) {
+    .searchform__content {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+    
+    }
 }
+
 
 .searchform {
     
@@ -81,9 +84,7 @@ lable {
    
 }
 
-.searchform__date-inputs {
-    display: flex;
-}
+
 
 
 
@@ -146,14 +147,30 @@ input[type="submit"]:hover {
 
 
 
-.react-datepicker-wrapper {
-    display: inline-block; 
+@media (min-width: 576px) {
+    .react-datepicker__input-container {
+        display: inline-block;
+        position: relative; 
+    }
+
+    .react-datepicker-wrapper {
+        display: inline-block; 
+    }
+
+    .searchform__date-inputs {
+        display: flex;
+    }
+
+    .button-mobile {
+        display: none;
+    }
+
+    .searchform__text-mobile {
+        display: none;
+    }
+    
 }
 
-.react-datepicker__input-container {
-    display: inline-block;
-    position: relative; 
-}
 
 .react-datepicker__input-container input {
     width: 176px;
@@ -181,4 +198,74 @@ input[type="submit"]:hover {
     margin-top: 10px;
     color: red;
 
+}
+
+@media (max-width: 575px) {
+    
+
+    .searchform {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        height: 663px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px #00000026;
+        margin-top: 47px;
+        margin-bottom: 80px;
+    }
+
+    .searchform__content-left {
+        flex-shrink: 1;
+        margin-top: 10px;
+        max-width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+
+    .searchform__content-right {
+        display: none;
+       
+    }
+
+    .searchform__text-mobile {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+        color: #949494;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .searchform__form-docs {
+        textarea,
+        select,
+        input{
+          flex-shrink: 1;
+          
+          font-family: Inter;
+          color: #949494;
+         
+          width: 100%;
+          height: 43px;
+          border-radius: 5px;
+          border: 1px solid #C7C7C7;
+          padding: 10px 15px 10px 15px;
+          font-size:18px;
+          box-shadow: 0px 0px 20px 0px #0000000D;
+          margin-top: 20px;
+            
+          
+        }
+
+        
+    }
+
+    
+
+    
 }

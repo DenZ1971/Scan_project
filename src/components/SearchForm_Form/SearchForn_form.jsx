@@ -307,6 +307,8 @@ export default function SearchForm_form({onResult}) {
                        
                     </div>
                     <div>{errors.startDate && <p className="error-date">{errors.startDate.message}</p>}</div>
+                    <input className="button-mobile" type="submit" value="Поиск"  />
+                    <div className="searchform__text-mobile">* Обязательные к заполнению поля</div>
                     
                 </div>
                 <div className="searchform__form" >
