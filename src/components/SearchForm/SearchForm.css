@@ -1,11 +1,8 @@
-
-
 .search__content {
     display: flex;
     justify-content: space-between;
     margin-top: 27px;
 }
-
 
 .search__title {
     font-family: Ferry;
@@ -15,8 +12,7 @@
    font-weight: 900;
     line-height: 48px;
     letter-spacing: 0.6px;
-    max-width: 743px;
-   
+    max-width: 743px; 
 }
 
 @media (min-width: 576px) {
@@ -28,31 +24,42 @@
         font-weight: 400;
         line-height: normal;
         padding-bottom: 63px;
-    
     }
 
     .search__image-wrapper_1 {
-   
         margin: 100px 50px 0 100px;
-        
         width: 91px;
         height: 111px;
         flex-shrink: 0;
     }
-}
 
+    .search__btn {
+        color: #FFF;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        padding: 84px 263px 0 63px;
+        padding: 14px 64px 18px 63px;
+        background-color:#5970FF;
+        border-radius: 5px;
+    }
+    
+    .search__btn:hover {
+        opacity: 0.8;
+        color: #000;
+    }
+    
+}
 
 .search__image {
     display: flex;
     padding-left: 0;
-    flex-shrink: 0;
-    
+    flex-shrink: 0;  
 }
 
-
-
 .search__image-wrapper_2 {
-   
     margin: 50px 50px 0 100px;
     width: 140px;
     height: 68px;
@@ -60,25 +67,6 @@
 }
 
 
-
-.search__btn {
-    color: #FFF;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.22px;
-    padding: 84px 263px 0 63px;
-    padding: 14px 64px 18px 63px;
-    background-color:#5970FF;
-    border-radius: 5px;
-
-}
-
-.search__btn:hover {
-    opacity: 0.8;
-    color: #000;
-}
 @media (min-width: 576px) {
     .search__form-content {
         max-width: 100%;
@@ -87,17 +75,16 @@
         margin-left: 0;
         margin-right: 0; 
     }
+
     .search__image-wrapper_3 {
         width: 440px;
         height: 470px;
     }
 
     .search__image-bottom {
-   
         position:relative; 
         padding-left:50px;
-        padding-top: 110px;
-        
+        padding-top: 110px;  
     }
 }
 
@@ -127,14 +114,10 @@
         font-weight: 400;
         line-height: normal;
         padding-bottom: 63px;
-    
     }
 
     .search__image-bottom {
-   
-       
-        padding: 20px;
-        
+        padding: 20px; 
     }
 
     .search__image-wrapper_2 {
@@ -144,8 +127,7 @@
     .search__image-wrapper_1 {
         display: flex;
         width: 91px;
-        height: 111px;
-        
+        height: 111px;   
     }
 
     .button-mobile {
@@ -159,14 +141,10 @@
         padding: 14px 64px 18px 63px;
         background-color:#5970FF;
         border-radius: 5px;
-    
     }
     
     .button-mobile:hover {
         opacity: 0.8;
         color: #000;
-    }
-
-        
-    
+    }    
 }

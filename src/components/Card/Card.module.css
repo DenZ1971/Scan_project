@@ -1,13 +1,8 @@
 .card {
-   
     width: 415px;
     height: 540px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px #00000033;
-    
-    
-
-
 }
 
 .card__header {
@@ -18,37 +13,26 @@
     height: 132px;
     border: 2px;
     border-radius: 10px 10px 0px 0px;
-
-    
-
 }
 
 .card__hederinfo {
     display: flex;
-    align-items: center;
-   
-    
+    align-items: center;  
 }
 
 .card__title {
     margin-left: 30px;
     font-size: 30px;
     font-weight: 500;
-    
-    
-
 }
 
-.card__desc {
-    
-    margin-top: 10px;
-    
+.card__desc {   
+    margin-top: 10px;   
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.01em;
     white-space: nowrap;
-
 }
 
 .card__image {
@@ -56,7 +40,6 @@
     margin-top: 11px;
     width: 92.24px;
     height: 83.15px;
-
 }
 
 .card__price {
@@ -68,8 +51,7 @@
     font-size: 30px;
     font-weight: 500;
     line-height: 36px;
-    letter-spacing: 0.01em;
-   
+    letter-spacing: 0.01em;  
 }
 
 .card__fullprice {
@@ -84,7 +66,6 @@ font-size: 18px;
 font-weight: 400;
 line-height: 22px;
 letter-spacing: 0.01em;
-
 }
 
 .card__tarif {
@@ -95,8 +76,6 @@ letter-spacing: 0.01em;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.01em;
-    
-
 }
 
 .card__tarifdesc::before {
@@ -112,17 +91,14 @@ letter-spacing: 0.01em;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;
-    letter-spacing: 0.01em;
-
-   
+    letter-spacing: 0.01em; 
 }
 
 .card__tarifdesclist {
     margin-bottom: 73px;
 }
 
-.card__btn {
-    
+.card__btn {   
     color: white;
     background-color: aqua;
     text-align: center;
@@ -142,12 +118,10 @@ letter-spacing: 0.01em;
 
 @media (max-width: 575px) {
     .card {
-   
         width: 335px;
         height: 512px;
         border-radius: 10px;
         box-shadow: 0px 0px 20px 0px #00000033
-    
     }
 
     .card__header {
@@ -158,45 +132,32 @@ letter-spacing: 0.01em;
         height: 132px;
         border: 2px;
         border-radius: 10px 10px 0px 0px;
-    
-        
-    
     }
     
     .card__hederinfo {
         display: flex;
-        align-items: center;
-       
-        
+        align-items: center; 
     }
     
     .card__title {
         margin-left: 30px;
         font-size: 20px;
         font-weight: 500;
-        
-        
-    
     }
     
     .card__desc {
-        
-        margin-top: 30px;
-        
+        margin-top: 30px; 
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
         letter-spacing: 0.01em;
         white-space: nowrap;
-    
     }
     
     .card__image {
-        
         margin-top: 11px;
         width: 59px;
         height: 53px;
-    
     }
     
     .card__price {
@@ -209,7 +170,6 @@ letter-spacing: 0.01em;
         font-weight: 500;
         line-height: 36px;
         letter-spacing: 0.01em;
-       
     }
     
     .card__fullprice {
@@ -224,8 +184,6 @@ letter-spacing: 0.01em;
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
-    
-    
     }
     
     .card__tarif {
@@ -236,8 +194,6 @@ letter-spacing: 0.01em;
         font-weight: 500;
         line-height: 22px;
         letter-spacing: 0.01em;
-        
-    
     }
     
     .card__tarifdesc::before {
@@ -255,8 +211,6 @@ letter-spacing: 0.01em;
         font-weight: 400;
         line-height: 19px;
         letter-spacing: 0.01em;
-    
-       
     }
     
     .card__tarifdesclist {
@@ -264,7 +218,6 @@ letter-spacing: 0.01em;
     }
     
     .card__btn {
-        
         display: flex;
         color: white;
         background-color: aqua;

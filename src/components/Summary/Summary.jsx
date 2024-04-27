@@ -9,15 +9,10 @@ export default function Promo({searchData}) {
       )
     }
 
-    console.log('Summary:', summary);
-
     var sum = summary.reduce(function(a, b){
       return a + b;
     })
-    
-
-
-
+  
   return (
     <div className="summary">
         <div className="container">
@@ -28,16 +23,12 @@ export default function Promo({searchData}) {
                     <div className="summary__title_2">Общая сводка</div>
                     <div className="summary__desc_2">Найдено {sum} вариантов</div>              
                 </div>
-
                 <div className="summary__image">
                     <img src={summaryImage} alt="Img"></img>
                 </div>
                 <div className="summary__title_2-mobile">Общая сводка</div>
                     <div className="summary__desc_2-mobile">Найдено {sum} вариантов</div>  
-
             </div>
-
-
         </div>
     </div>
   );

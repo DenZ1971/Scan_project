@@ -13,8 +13,7 @@ export default function SearchForm_form({onResult}) {
     const navigate = useNavigate();
 
     const handleResult = (searchData) => {
-        onResult(searchData);
-        
+        onResult(searchData); 
     }
     const [errorMessage, setErrorMessage] = useState('');
     const {
@@ -28,19 +27,15 @@ export default function SearchForm_form({onResult}) {
         mode: 'onBlur',
     });
 
-    
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
 
-
-
     const formatDateToString = (date) => {
         const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0'); // добавляем ведущий ноль, если месяц < 10
-        const day = String(date.getDate()).padStart(2, '0'); // добавляем ведущий ноль, если день < 10
+        const month = String(date.getMonth() + 1).padStart(2, '0'); 
+        const day = String(date.getDate()).padStart(2, '0'); 
         return `${year}-${month}-${day}`;
     };
-
 
     const handleStartDateChange = (date) => {
         const formattedDate = formatDateToString(date);
@@ -52,21 +47,19 @@ export default function SearchForm_form({onResult}) {
         const formattedDate = formatDateToString(date);
         setEndDate(formattedDate);
         setValue('endDate', date);
-        
     };
 
     const validateStartDate = (value) => {
         const endDate = getValues('endDate');
-        if (!value || !endDate) return true; // Пропускаем валидацию, если значения пустые
+        if (!value || !endDate) return true; 
         return value <= endDate || 'Дата начала не может быть позже даты окончания';
     };
 
     const validateEndDate = (value) => {
         const startDate = getValues('startDate');
-        if (!value || !startDate) return true; // Пропускаем валидацию, если значения пустые
+        if (!value || !startDate) return true; 
         return value >= startDate || 'Дата окончания не может быть раньше даты начала';
     };
-
 
     const onSubmit = async (data) => {
         data.startDate = startDate;
@@ -77,22 +70,12 @@ export default function SearchForm_form({onResult}) {
             'Authorization': `Bearer ${accessToken}`
         };
         
-
-        console.log(headers);
-        console.log('Do', data);
-        
-        
-        // startDate = startDate;
-        // endDate = endDate;
-
-
         const response = await axios.post('https://gateway.scan-interfax.ru/api/v1/objectsearch/histograms', {
             
             issueDateInterval: {
                 startDate: startDate,
                 endDate: endDate,
             }, 
-                
                 searchContext: {
                     targetSearchEntitiesContext: {
                         targetSearchEntities: [
@@ -145,14 +128,11 @@ export default function SearchForm_form({onResult}) {
 
             } ,{headers});
            
-            console.log('Response:', response.data);
-
             const secondRequestData = {
                 issueDateInterval: {
                     startDate: startDate,
                     endDate: endDate,
                 }, 
-                    
                     searchContext: {
                         targetSearchEntitiesContext: {
                             targetSearchEntities: [
@@ -202,19 +182,16 @@ export default function SearchForm_form({onResult}) {
                     sortDirectionType: 'desc',
                     intervalType: 'month',
                     histogramTypes: ['totalDocuments', 'riskFactors'],
-    
                 } ;
                 
             const secondResponse = await axios.post('https://gateway.scan-interfax.ru/api/v1/objectsearch', secondRequestData ,{headers});
-            console.log('Second Response:', secondResponse.data);
 
-            reset(); // Очистка формы после успешной отправки
+            reset(); 
             onResult(response.data.data);
             console.log('onResult:', onResult);
             navigate('/result', { state: { searchData: response.data.data, secondSearchData: secondResponse.data } });
         } catch (error) {
             console.error('Error:', error);
-            // Обработка ошибок
             setErrorMessage('Ошибка при отправке данных');
         }
     };
@@ -233,13 +210,11 @@ export default function SearchForm_form({onResult}) {
                                     {...register('inn', {
                                         required: 'Поле обязательно к заполнению',
                                         validate: (value) => validateInn(value),
-            
                                     })}
                                     placeholder="10 цифр"
                                 />
                             {errors.inn && <p className="error">{errors.inn.message}</p>}
                         </div>
-
                         <div className="searchform__form-docs">
                             <label htmlFor='tonality'>
                                 Тональность
@@ -254,10 +229,7 @@ export default function SearchForm_form({onResult}) {
                                     <option value="positive">позитивная</option>
                                     <option value="negative">негативная</option>
                                 </select>
-                            
                         </div>
-
-                        
                         <div className="searchform__form-docs">
                             <label htmlFor='documentCount'>
                                 Количество документов в выдаче*
@@ -275,7 +247,6 @@ export default function SearchForm_form({onResult}) {
                                 />
                             {errors.documentCount && <p className="error">{errors.documentCount.message}</p>}
                         </div>
-
                         <div className="searchform__form-date">
                             <label htmlFor='startDate'>
                                 Диапазон поиска*
@@ -291,7 +262,6 @@ export default function SearchForm_form({onResult}) {
                                     selected={startDate}
                                     onChange={(date)=>{handleStartDateChange(date)} }
                                 />
-                        
                                 <DatePicker
                                     {...register('endDate', {
                                         validate: validateEndDate
@@ -303,13 +273,11 @@ export default function SearchForm_form({onResult}) {
                                     onChange={(date)=>{handleEndDateChange(date)} }
                                 />
                             </div>
-                        </div>
-                       
+                        </div>  
                     </div>
                     <div>{errors.startDate && <p className="error-date">{errors.startDate.message}</p>}</div>
                     <input className="button-mobile" type="submit" value="Поиск"  />
-                    <div className="searchform__text-mobile">* Обязательные к заполнению поля</div>
-                    
+                    <div className="searchform__text-mobile">* Обязательные к заполнению поля</div>  
                 </div>
                 <div className="searchform__form" >
                     <div className="searchform__content-right" >
@@ -353,10 +321,6 @@ export default function SearchForm_form({onResult}) {
                     </div>
                 </div>
             </div>
-            
         </form>
     );
 }
-
-
-

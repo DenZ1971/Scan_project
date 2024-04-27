@@ -1,7 +1,6 @@
 
 @media (min-width: 576px) {
     .formauth {
-
         width: 429px;
         height: 523px;
         border-radius: 10px;
@@ -9,16 +8,13 @@
         margin-top: 69px;
         margin-right: 81px;
         margin-bottom: 80px;
-    
-    
     }
     .formauth__form {
         max-width: 429px;
         margin: 0 auto;
         padding: 0 25px;
-     }
+    }
 }
-
 
 .formauth__header {
     display: flex;
@@ -37,8 +33,6 @@
     color: #029491;
     margin-left: 77px;
     margin-top: 25px;
-
-
 }
 
 .formauth__header-textright {
@@ -52,18 +46,14 @@
     margin-top: 25px;
 }
 
-
-
 .formauth__form-login {
     margin-top: 20px;
 }
-
 
 .formauth__form {
 textarea,
 select,
 input {
-  
   display: block;
   box-sizing: border-box;
   width: 379px;
@@ -83,24 +73,17 @@ label {
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
-    letter-spacing: 0.02em;
-    
+    letter-spacing: 0.02em; 
 }
 
-
-
-input[type="submit"] {
+input[type="submit"].button {
     background: #516391;
     color: white;
     margin-top: 30px;
-    
 }
 
- 
-
-input[type="submit"]:hover {
+input[type="submit"].button:hover {
   background: rgb(36, 16, 163);
-  
 }
 
 .formauth__error {
@@ -111,8 +94,6 @@ input[type="submit"]:hover {
     letter-spacing: 0.01em;
     color: #FF5959;
     text-align: center;
-
-
 }
 
 .formauth__restorepasswod {
@@ -127,7 +108,6 @@ input[type="submit"]:hover {
     text-decoration: underline !important;
     justify-content:center;
 }
-
 
 @media (max-width: 575px) {
     .formauth {
@@ -153,8 +133,6 @@ input[type="submit"]:hover {
         color: #029491;
         margin-left: 25px;
         margin-top: 25px;
-    
-    
     }
     
     .formauth__header-textright {
@@ -178,7 +156,6 @@ input[type="submit"]:hover {
         textarea,
         select,
         input {
-          
           display: flex;
           box-sizing: border-box;
           width: 100%;
@@ -196,9 +173,6 @@ input[type="submit"]:hover {
         background: #516391;
         color: white;
         margin-top: 30px;
-        
+        justify-content: center;
     }
-
 }
-
-

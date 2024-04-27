@@ -6,8 +6,6 @@ import pc from '../img/Business.png'
 import { useState, useEffect } from 'react';
 
 
-
-
 export default function Tarifes() {
   const [Authenticated, setAuthenticated] = useState(false);
 
@@ -15,8 +13,6 @@ export default function Tarifes() {
       const token = localStorage.getItem('accessToken');
       setAuthenticated(!!token); 
     }, []); 
-
-
   return (
     <section className="tarifes">
         <div className="container">
@@ -35,14 +31,9 @@ export default function Tarifes() {
 
                 <Card color='black' textcolor='white' title='Busines' description='Для корпоративных клиентов' img={pc}
                 price='2379 ₽' fullprice='2700 ₽' pricedesc=''
-                tarifdesc1='Все пункты тарифа Pro' tarifdesc2='Безлимитное количество запросов' tarifdesc3='Приоритетная поддержка' button='Подробнее'/>
-                
+                tarifdesc1='Все пункты тарифа Pro' tarifdesc2='Безлимитное количество запросов' tarifdesc3='Приоритетная поддержка' button='Подробнее'/>  
             </div>
-
-
-
         </div>
     </section>
-
   );
 }

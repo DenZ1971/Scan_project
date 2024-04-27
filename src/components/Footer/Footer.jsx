@@ -19,10 +19,6 @@ export default function Futer() {
           </div>
         </div>
       </div>
-
-
     </footer>
-     
-
   )
 }

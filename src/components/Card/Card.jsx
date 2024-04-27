@@ -10,8 +10,7 @@ export default function Card(props) {
             <p className={styles.card__desc}><span>{props.description}</span></p>
                 </div>
             </div>
-            <img className={styles.card__image} src={props.img} alt='Icon' ></img>
-            
+            <img className={styles.card__image} src={props.img} alt='Icon' ></img>  
         </div>
         <div className={styles.card__status}></div>
         <div className={styles.card__price}>

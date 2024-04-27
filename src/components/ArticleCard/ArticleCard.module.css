@@ -1,33 +1,10 @@
 .articlecard {
-   
     width: 641px;
     height: auto;
     border-radius: 10px;
     border: 2px;
     box-shadow: 0px 0px 20px 0px #00000033;
-    
-
-
 }
-
-/* .articlecard__header {
-    display: flex;
-    justify-content: space-between;
-    
-    width: 415px;
-    height: 132px;
-    border-radius: 10px 10px 0px 0px;
-
-    
-
-} */
-
-/* .articlecard__hederinfo {
-    display: flex;
-    align-items: center;
-   
-    
-} */
 
 .articlecard__info {
     font-size: 16px;
@@ -43,14 +20,9 @@
     font-weight: 500;
     line-height: 32px;
     margin-left: 30px;
-    
-    
-    
-
 }
 
 .articlecard__desc {
-    
     margin-top: 10px;
     font-size: 12px;
     font-weight: 400;
@@ -61,8 +33,6 @@
     width: 157px;
     height: 22px;
     border-radius: 5px;
-    
-
 }
 
 .articlecard__image {
@@ -86,7 +56,6 @@
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.01em;
-   
 }
 
 .articlecard__fullprice {
@@ -101,7 +70,6 @@ font-size: 18px;
 font-weight: 400;
 line-height: 22px;
 letter-spacing: 0.01em;
-
 }
 
 .articlecard__tarif {
@@ -112,14 +80,12 @@ letter-spacing: 0.01em;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.01em;
-    
-
 }
 
 .articlecard__tarifdesc::before {
-    content: url(../img/icons8.png); /* Замените 'путь_к_иконке' на путь к вашей иконке */
-    display: inline-block; /* Отображаем иконку как блок */
-    margin-right: 5px; /* Расстояние между иконкой и текстом */
+    content: url(../img/icons8.png); 
+    display: inline-block; 
+    margin-right: 5px; 
   }
 
 .articlecard__tarifdesc {
@@ -129,9 +95,7 @@ letter-spacing: 0.01em;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;
-    letter-spacing: 0.01em;
-
-   
+    letter-spacing: 0.01em; 
 }
 
 .articlecard__footer {
@@ -142,13 +106,9 @@ letter-spacing: 0.01em;
     margin-right: 30px; 
 } 
 
-
-
 .articlecard__btn {
-    
     color: black;
     text-align: center;
-    
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
@@ -171,19 +131,15 @@ letter-spacing: 0.01em;
 
 @media (max-width: 575px) {
     .articlecard {
-   
         width: 100%;
         height: auto;
         border-radius: 10px;
         border: 2px;
         box-shadow: 0px 0px 20px 0px #00000033;
-        
-    
-    
     }
 
     .articlecard__text {
-        height: auto; /* Установка высоты на auto */
+        height: auto; 
         margin-left: 30px;
         margin-right: 30px;
         margin-top: 20px;

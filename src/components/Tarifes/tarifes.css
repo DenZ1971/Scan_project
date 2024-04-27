@@ -1,9 +1,7 @@
 .tarifes {
     padding-top: 108px;
     padding-bottom: 128px;
-
 }
-
 
 .tarifes__title {
     margin-bottom: 70px;
@@ -11,12 +9,6 @@
     font-weight: 900;
     font-size: 45px;
 }
-
-/* .tarifes__card {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 30px;
-} */
 
 .tarifes__card {
     display: grid;
@@ -51,10 +43,9 @@
       font-weight: 900;
       font-size: 28px;
   }
+
   .tarifes__card {
     display:flex;
     flex-direction: column;
-    
   }
-  
   }

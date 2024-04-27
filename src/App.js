@@ -19,27 +19,17 @@ function App() {
   const [searchData, setSearchData] = useState(null);
   const handleResult = (searchData ) => {
     setSearchData(searchData);
-    console.log('Search data in App:', searchData);
-
-
-    
   }
   
-  
-
-  
-
   return (
     <div>
       <AuthProvider>
       <Header />
       <Routes>
-        
         <Route path='' element={< Home  />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/search" element={isAuthenticated ? <SearchForm onResult={handleResult} /> : <Navigate to="/auth" />} />
         <Route path="/result" element={<Result  searchData = {searchData}/>} />
-
       </Routes>
       <Footer />
       </AuthProvider>
@@ -48,12 +38,10 @@ function App() {
 }
 
 function ResultPage({ searchData }) {
-  // Если данные searchData отсутствуют, перенаправляем пользователя на страницу поиска
   if (!searchData) {
     return <Navigate to=" " />;
   }
 
-  // Иначе показываем страницу с результатами
   return <Result searchData={searchData} />;
 }
 

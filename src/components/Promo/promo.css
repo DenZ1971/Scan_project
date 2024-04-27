@@ -1,9 +1,5 @@
-/* @font-face {
-    font-family: 'Ferry'; /* Замените 'YourFontName' на имя вашего шрифта. */
-    /*src: local('2717-font') url('../../../public/fonts/2717-font.otf') format('otf'); /* Укажите правильный путь к вашему файлу шрифта. */
-  /*}  */
-@import url('../../styles/index.css');
 
+@import url('../../styles/index.css');
 
 @media (min-width: 576px) {
 .promo {
@@ -16,8 +12,6 @@
     margin-top: 27px;
 }
 
-
-
 .promo__title {
     font-family: Ferry;
     color: #000;
@@ -27,9 +21,6 @@
     line-height: 72px;
     letter-spacing: 0.6px;
     max-width: 743px;
-   
-    
-
 }
 
 .promo__desc {
@@ -40,11 +31,6 @@
     font-weight: 400;
     line-height: normal;
     padding-bottom: 63px;
-
-}
-
-.promo__btn-wrapper {
-
 }
 
 .promo__btn {
@@ -58,7 +44,6 @@
     padding: 14px 64px 18px 63px;
     background-color:#5970FF;
     border-radius: 5px;
-
 }
 
 .promo__btn:hover {
@@ -75,12 +60,11 @@
 }
 
 @media (max-width: 575px) {
-
     .promo__content {
-        
         justify-content: space-between;
         margin-top: 27px;
     }
+
     .promo__title {
         font-family: Ferry;
         color: #000;
@@ -90,7 +74,6 @@
         line-height: 36px;
         letter-spacing: 0.6px;
         max-width: 560px;
-    
     }
 
     .promo__desc {
@@ -101,7 +84,6 @@
         font-weight: 400;
         line-height: normal;
         padding-bottom: 63px;
-    
     }
 
     .promo__btn {
@@ -116,7 +98,6 @@
         padding: 14px 50px 18px 50px;
         background-color:#5970FF;
         border-radius: 5px;
-    
     }
     
     .promo__btn:hover {
@@ -127,7 +108,6 @@
     .promo__image {
         display: flex;
         padding-top: 30px;
-        padding-right: 0;
-        
+        padding-right: 0;  
     }
 }

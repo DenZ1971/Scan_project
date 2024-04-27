@@ -5,8 +5,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './ResultCarousel.css';
-import { useState } from 'react';
-
 
 
 export default function Carousel({searchData}) {
@@ -15,25 +13,12 @@ export default function Carousel({searchData}) {
   if (searchData && searchData.length > 0) {
     for (let i = 1; i < searchData.length; i++) {
       transformedData.push({
-        date: `${searchData[i-1].data[i-1].date}`,
+        date: new Date(searchData[i-1].data[i-1].date).toLocaleDateString('en-GB'),
         value: `${searchData[i-1].data[i-1].value}`,
         risk: `${searchData[i].data[i-1].value}`
     })
   }
-  // for (let i = 1; i < searchData.length; i++) {
-  //   transformedData.push({
-  //     date: `${searchData[i-1].data[i-1].date}`,
-  //     value: `${searchData[i-1].data[i-1].value}`,
-  //     risk: `${searchData[i].data[i-1].value}`
-  //   })
-  // }
- 
-
-  console.log(transformedData);
-
   
-  
-  console.log('Search data in ResultCarousel:', searchData);
   return (
     <div className='container'>
         <div className="resultcarousel__table">
@@ -49,7 +34,6 @@ export default function Carousel({searchData}) {
                 Риски
                  </div>
             </div>
-        
             <div className='resultcarousel__wrapper'>
 
     {transformedData && transformedData.length > 0 ? (
@@ -64,40 +48,27 @@ export default function Carousel({searchData}) {
       breakpoints={{
         320:{
           slidesPerView:2,
-          
         },
         800:{
-          slidesPerView: 4,
-          
+          slidesPerView: 4,  
         },
-        1080:{slidesPerView: 4,
-            
+        1080:{slidesPerView: 4,    
         },
-
-      }}
-      
+      }}  
   >
-    
     {transformedData.map((item, index) => (
-      console.log(item, index),
-
       <SwiperSlide key={index} className='resultcarousel'>
         <span slot="wrapper-start"></span>
         <div className='resultcarousel__slide'>
-        
         <div className='resultcarousel__data'>
           {item.date}
         </div> 
-       
         <div className='resultcarousel__data'>
           {item.value}
         </div>
-       
-       
         <div className='resultcarousel__data'>
           {item.risk}
         </div>
-       
         </div>
         <span slot="wrapper-end>"></span>
       </SwiperSlide>

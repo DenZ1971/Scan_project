@@ -25,6 +25,5 @@ export default function Auth({onAuthentication}) {
             </div>
         </div>
     </div>
-    
   )
 }

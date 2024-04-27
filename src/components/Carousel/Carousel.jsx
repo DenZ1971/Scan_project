@@ -13,7 +13,6 @@ const icon1 = faClock;
 const icon2 = faMagnifyingGlass;
 const icon3 = faShieldAlt;
 
-
 const data = [
   {
     id: 1,
@@ -46,7 +45,6 @@ export default function Carousel() {
   return (
     <div className='container'>
       <div className="carousel__title">Почему именно мы</div>
-      
       <div className='carousel__wrapper'>
 
     <Swiper
@@ -66,23 +64,18 @@ export default function Carousel() {
         },
         1080:{slidesPerView: 3,
         },
-
       }}
-  
   >
-    
     {data.map(card => (
       <SwiperSlide key={card.id} className='carousel'>
         <div className='carousel__img'>
         <FontAwesomeIcon icon={card.icon} style={{ width: '65px', height: '79px' }}/>
-
         </div>
         <div className='carousel__text'>
           {card.text}
         </div>
       </SwiperSlide>
-    ))}
-    
+    ))} 
   </Swiper>
   </div>
   </div>

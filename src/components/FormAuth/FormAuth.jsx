@@ -14,7 +14,6 @@ export default function FormAuth({ onAuthentication }) {
         formState: {
             errors,
             isValid
-    
         },
         handleSubmit,
         reset,
@@ -22,29 +21,23 @@ export default function FormAuth({ onAuthentication }) {
         mode: 'onBlur'
     });
 
-
     const onSubmit = async(data) => {
         try {
             const response = await axios.post('https://gateway.scan-interfax.ru/api/v1/account/login', data);
             console.log('Response:', response.data);
       
-            // Далее обработка ответа от сервера, например:
-            // Сохранение данных в localStorage
             localStorage.setItem('accessToken', response.data.accessToken);
             localStorage.setItem('expire', response.data.expire);
       
-            reset(); // Очистка формы после успешной отправки
+            reset(); 
             
-
             navigate('/');
           } catch (error) {
             console.error('Error:', error);
-            // Обработка ошибок
             setErrorMessage('Ошибка при отправке данных');
           }
         };
         
-  
     return (
     <div className="formauth">
         <div className="formauth__header">
@@ -63,9 +56,6 @@ export default function FormAuth({ onAuthentication }) {
 
                 //         message:'Введите корректные данные'
                 // }
-
-
-
                 })}
             />
             </label>
@@ -81,15 +71,9 @@ export default function FormAuth({ onAuthentication }) {
             />
             </label>
             </div>
-            
             <input className='button' type='submit' value='Войти' disabled={!isValid}/>
-
             <a className='formauth__restorepasswod' href='#s'>Восстановить пароль</a>
-        
         </form>
-        
-
-
     </div>
   )
 }

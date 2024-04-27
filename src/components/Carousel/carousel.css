@@ -1,15 +1,10 @@
-.carousel__title {
-    
+.carousel__title { 
     font-family: Ferry;
     font-size: 45px;
     font-weight: 900;
     line-height: 54px;
     letter-spacing: 0.01em;
-   
-
 }
-
-
 
 .carousel {
     margin-top: 70px;
@@ -25,14 +20,12 @@
 }
 
 :root {
-
     --swiper-navigation-size: 25px;
 }
 
 .swiper-button-prev {
     padding-right: 35px;
     color: #000;
-  
     font-weight: 900;
     opacity: 0.6;
 }
@@ -40,7 +33,6 @@
 .swiper-button-next {
     padding-left: 35px;
     color: #000;
-   
     font-weight: 900;
     opacity: 0.6;
 }
@@ -51,9 +43,6 @@
     width: 65px;
     height: 79px;
     color: hsl(124, 91%, 39%);
-   
-
-
 }
 
 .carousel__text {
@@ -65,13 +54,10 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 12px;
-
-
 }
 
 @media (max-width: 575px) {
     .carousel__title {
-    
         font-family: Ferry;
         font-size: 28px;
         font-weight: 900;
@@ -90,8 +76,6 @@
         margin-left: 20px;
         margin-right: 20px;
         margin-top: 12px;
-    
-    
     }
     .carousel__img {
         margin-top: 22px;
@@ -99,9 +83,6 @@
         width: 56px;
         height: 64px;
         color: hsl(124, 91%, 39%);
-       
-    
-    
     }
 }
 

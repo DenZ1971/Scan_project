@@ -7,7 +7,6 @@ export default function ArticleCard(props) {
         return str.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
       };
 
-    // const attributes = (props.info).slice(0);
     console.log('Attributes:', props.description);
 
     function attributes(description) {
@@ -25,21 +24,18 @@ export default function ArticleCard(props) {
     const attributeText = attributes(description);
 
     const formatDate = (inputDate) => {
-        // Преобразование строки с датой в объект Date
         const dateObject = new Date(inputDate);
         
-        // Получение компонентов даты (день, месяц, год)
         const day = dateObject.getDate();
         const month = dateObject.getMonth() + 1;
         const year = dateObject.getFullYear();
         
-        // Форматирование даты в нужный формат (например, DD.MM.YYYY)
         const formattedDate = `${day.toString().padStart(2, '0')}.${month.toString().padStart(2, '0')}.${year}`;
         
         return formattedDate;
     };
 
-    // Форматирование даты
+    
     const formattedDate = formatDate(date);
 
     const maxLength = 1500;
@@ -67,8 +63,7 @@ export default function ArticleCard(props) {
             Читать в источнике  
             </a>
         <div className={styles.articlecard__footerinfo}>{props.footer} слов</div>
-        </div>
-        
+        </div> 
     </div>
   )
 }
